@@ -8,13 +8,16 @@ public class MyPrinter {
 
     public void printOwing(double amount) {
         printBanner();
-
-        // 明細の表示
-        System.out.println("name: " + name);
-        System.out.println("amount: " + amount);
+        printDetails(amount);
     }
 
     private void printBanner() {
         System.out.println("バナー出力");
     }
+
+    private void printDetails(double amount) {
+        System.out.println("name: " + name);
+        System.out.println("amount: " + amount);
+    }
+
 }
