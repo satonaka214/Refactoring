@@ -8,11 +8,14 @@ public class Price {
     private final double itemPrice;
 
     public double getPrice() {
-        double basePrice = quantity * itemPrice;
-        if (basePrice > 1000) {
-            return basePrice * .95;
+        if (basePrice() > 1000) {
+            return basePrice() * .95;
         } else {
-            return basePrice * .98;
+            return basePrice() * .98;
         }
+    }
+
+    private double basePrice() {
+        return this.quantity * this.itemPrice;
     }
 }
