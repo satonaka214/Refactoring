@@ -10,10 +10,6 @@ public class Person {
         this.name = name;
     }
 
-    public Department getDepartment() {
-        return this.department;
-    }
-
     public void setDepartment(Department department) {
         this.department = department;
     }

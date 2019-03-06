@@ -11,7 +11,7 @@ public class PersonTest {
         bob.setName("bob");
         bob.setDepartment(personnel);
 
-        Person manager = bob.getDepartment().getManager();
+        Person manager = bob.getManager();
 
         Assert.assertEquals("alice", manager.getName());
     }
