@@ -17,4 +17,8 @@ public class Person {
     public void setDepartment(Department department) {
         this.department = department;
     }
+
+    public Person getManager() {
+        return this.department.getManager();
+    }
 }
