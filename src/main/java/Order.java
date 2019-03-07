@@ -1,16 +1,16 @@
 public class Order {
     private Customer customer;
 
-    public Order(String customer) {
+    public Order(String customerName) {
 
-        this.customer = new Customer(customer);
+        this.customer = new Customer(customerName);
     }
 
-    public void setCustomer(String customer) {
-        this.customer = new Customer(customer);
+    public void setCustomer(String customerName) {
+        this.customer = new Customer(customerName);
     }
 
-    public String getCustomer() {
+    public String getCustomerName() {
         return this.customer.getName();
     }
 }

@@ -6,7 +6,7 @@ public class OrderTest {
     public void constructTest() {
         Order order = new Order("Alice");
 
-        Assert.assertEquals(order.getCustomer(), "Alice");
+        Assert.assertEquals(order.getCustomerName(), "Alice");
     }
 
     @Test
@@ -15,6 +15,6 @@ public class OrderTest {
 
         order.setCustomer("Bob");
 
-        Assert.assertEquals(order.getCustomer(), "Bob");
+        Assert.assertEquals(order.getCustomerName(), "Bob");
     }
 }
