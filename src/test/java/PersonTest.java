@@ -3,19 +3,19 @@ import org.junit.Test;
 public class PersonTest {
     @Test
     public void personTest() {
-        Person alice = new Person(Person.A, Person.ENGINEER);
+        Person alice = new Person(BloodGroup.A, EmployeeType.ENGINEER);
 
         switch (alice.getBloodGroup()) {
-            case Person.O:
+            case O:
                 System.out.println("bloodGroup: O");
                 break;
-            case Person.A:
+            case A:
                 System.out.println("bloodGroup: A");
                 break;
-            case Person.B:
+            case B:
                 System.out.println("bloodGroup: B");
                 break;
-            case Person.AB:
+            case AB:
                 System.out.println("bloodGroup: AB");
                 break;
             default:
@@ -24,25 +24,26 @@ public class PersonTest {
         }
 
         switch (alice.getEmployeeType()) {
-            case Person.ENGINEER:
+            case ENGINEER:
                 System.out.println("employeeType: engineer");
                 break;
-            case Person.MANAGER:
+            case MANAGER:
                 System.out.println("employeeType: manager");
                 break;
             default:
                 System.out.println("employeeType: error");
         }
 
-        switch (alice.getBloodGroup()) {
-            case Person.ENGINEER:
-                System.out.println("employeeType: engineer");
-                break;
-            case Person.MANAGER:
-                System.out.println("employeeType: manager");
-                break;
-            default:
-                System.out.println("employeeType: error");
-        }
+//        // 型不一致でコンパイルエラーになる
+//        switch (alice.getBloodGroup()) {
+//            case ENGINEER:
+//                System.out.println("employeeType: engineer");
+//                break;
+//            case MANAGER:
+//                System.out.println("employeeType: manager");
+//                break;
+//            default:
+//                System.out.println("employeeType: error");
+//        }
     }
 }

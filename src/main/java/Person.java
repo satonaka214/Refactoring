@@ -1,33 +1,25 @@
 public class Person {
-    public static final int O = 0;
-    public static final int A = 1;
-    public static final int B = 2;
-    public static final int AB = 3;
+    private BloodGroup bloodGroup;
+    private EmployeeType employeeType;
 
-    public static final int ENGINEER = 0;
-    public static final int MANAGER = 1;
-
-    private int bloodGroup;
-    private int employeeType;
-
-    public Person(int bloodGroup, int employeeType) {
+    public Person(BloodGroup bloodGroup, EmployeeType employeeType) {
         this.bloodGroup = bloodGroup;
         this.employeeType = employeeType;
     }
 
-    public int getBloodGroup() {
+    public BloodGroup getBloodGroup() {
         return bloodGroup;
     }
 
-    public void setBloodGroup(int bloodGroup) {
+    public void setBloodGroup(BloodGroup bloodGroup) {
         this.bloodGroup = bloodGroup;
     }
 
-    public int getEmployeeType() {
+    public EmployeeType getEmployeeType() {
         return employeeType;
     }
 
-    public void setEmployeeType(int employeeType) {
+    public void setEmployeeType(EmployeeType employeeType) {
         this.employeeType = employeeType;
     }
 
