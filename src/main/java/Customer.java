@@ -14,7 +14,7 @@ public class Customer {
         instances.put(this.getName(), this);
     }
 
-    public static Customer create(String name) {
+    public static Customer getNamed(String name) {
         return instances.get(name);
     }
 
