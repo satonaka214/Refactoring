@@ -7,6 +7,7 @@ import java.util.List;
 public class OperateOrderTest {
     @Test
     public void numberOfOrdersForTest() {
+        Customer.loadCustomers();
         List<Order> orderList = new ArrayList<>();
         orderList.add(new Order("Alice"));
         orderList.add(new Order("Bob"));
