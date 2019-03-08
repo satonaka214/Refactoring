@@ -15,15 +15,7 @@ public class Price {
     }
 
     public int getCharge() {
-        int charge;
-        if (notSummer()) {
-            charge = winterCharge();
-        }
-        else {
-            charge = summerCharge();
-        }
-
-        return charge;
+        return notSummer() ? winterCharge() : summerCharge();
     }
 
     private int winterCharge() {
