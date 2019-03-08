@@ -17,16 +17,25 @@ public class Price {
     public int getCharge() {
         int charge;
         if (notSummer()) {
-            charge = (int) (this.quantity * WINTER_RATE + WINTER_SERVICE_CHARGE);
+            charge = winterCharge();
         }
         else {
-            charge = (int) (this.quantity * SUMMER_RATE);
+            charge = summerCharge();
         }
 
         return charge;
     }
 
+    private int winterCharge() {
+        return (int) (this.quantity * WINTER_RATE + WINTER_SERVICE_CHARGE);
+    }
+
+    private int summerCharge() {
+        return (int) (this.quantity * SUMMER_RATE);
+    }
+
     private boolean notSummer() {
         return this.date.before(SUMMER_START) || this.date.after(SUMMER_END);
     }
+
 }
