@@ -16,7 +16,7 @@ public class Price {
 
     public int getCharge() {
         int charge;
-        if (this.date.before(SUMMER_START) || this.date.after(SUMMER_END)) {
+        if (notSummer()) {
             charge = (int) (this.quantity * WINTER_RATE + WINTER_SERVICE_CHARGE);
         }
         else {
@@ -24,5 +24,9 @@ public class Price {
         }
 
         return charge;
+    }
+
+    private boolean notSummer() {
+        return this.date.before(SUMMER_START) || this.date.after(SUMMER_END);
     }
 }
