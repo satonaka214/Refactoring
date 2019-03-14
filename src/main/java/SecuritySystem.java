@@ -8,20 +8,10 @@ public class SecuritySystem {
     }
 
     private void sendAlert(String[] people) {
-        for (String person : people) {
-            if (person.equals("Don")) {
-                sendAlert(person);
-                foundPerson(people);
-                return;
-            }
-            if (person.equals("John")) {
-                sendAlert(person);
-                foundPerson(people);
-                return;
-            }
+        String person = foundPerson(people);
+        if (!person.equals("")) {
+            sendAlert(person);
         }
-
-        foundPerson(people);
     }
 
     private String foundPerson(String[] people) {
