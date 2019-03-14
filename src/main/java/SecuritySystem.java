@@ -10,10 +10,23 @@ public class SecuritySystem {
         for (String person : people) {
             if (person.equals("Don")) {
                 sendAlert(person);
-                return "Don";
+                return foundPerson(people);
             }
             if (person.equals("John")) {
                 sendAlert(person);
+                return foundPerson(people);
+            }
+        }
+
+        return foundPerson(people);
+    }
+
+    private String foundPerson(String[] people) {
+        for (String person : people) {
+            if (person.equals("Don")) {
+                return "Don";
+            }
+            if (person.equals("John")) {
                 return "John";
             }
         }
