@@ -2,7 +2,8 @@ import java.io.*;
 
 public class SecuritySystem {
     public void checkSecurity(String[] people) throws IOException {
-        String found = foundMiscreant(people);
+        foundMiscreant(people);
+        String found = foundPerson(people);
         someLaterCode(found);
     }
 
