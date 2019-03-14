@@ -2,24 +2,26 @@ import java.io.*;
 
 public class SecuritySystem {
     public void checkSecurity(String[] people) throws IOException {
-        foundMiscreant(people);
+        sendAlert(people);
         String found = foundPerson(people);
         someLaterCode(found);
     }
 
-    private String foundMiscreant(String[] people) {
+    private void sendAlert(String[] people) {
         for (String person : people) {
             if (person.equals("Don")) {
                 sendAlert(person);
-                return foundPerson(people);
+                foundPerson(people);
+                return;
             }
             if (person.equals("John")) {
                 sendAlert(person);
-                return foundPerson(people);
+                foundPerson(people);
+                return;
             }
         }
 
-        return foundPerson(people);
+        foundPerson(people);
     }
 
     private String foundPerson(String[] people) {
